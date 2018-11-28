@@ -24,7 +24,6 @@ body {
 h1 {
   margin: 0;
   font-size: 2rem;
-  font-weight: bold;
 }
 
 header {
@@ -34,6 +33,7 @@ header {
 
 header h1 {
   color: #fff;
+  font-weight: bold;
   text-align: center;
 }
 
@@ -52,8 +52,8 @@ li {
 nav a {
   white-space: nowrap;
   display: inline-block;
-  padding: .5em 0;
-  font-weight: bold;
+  padding: .5em;
+  font-weight: normal;
   text-decoration: none;
   color: #6c8fe0;
 }
@@ -63,8 +63,73 @@ nav a:hover {
   color: #fff;
 }
 
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+@media only screen and (min-width: 25em) {
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  li {
+    width: 50%;
+    text-align: center;
+  }
+
+}
+
+@media only screen and (min-width: 38em) {
+
+  html {
+    font-size: 110%;
+    line-height: 1.4;
+  }
+
+  header {
+    padding: .5em .75em;
+  }
+
+  li {
+    width: 25%;
+  }
+
+}
+
+@media only screen and (min-width: 60em) {
+
+  html {
+    font-size: 120%;
+    line-height: 1.5;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 .75rem;
+  }
+
+  li {
+    width: auto;
+  }
+
+  h1 {
+    padding-left: .5em;
+  }
+
+  ul {
+    padding-right: .5em;
+  }
+
+}
+
+@media only screen and (min-width: 90em) {
+
+  html {
+    font-size: 130%;
+  }
+
+  header {
+    padding: .3em 0 .5em;
+  }
+
 }
